@@ -1,6 +1,6 @@
 // Import stylesheets
-import './style.css';
+import './main.scss';
 
 // Write Javascript code!
-const appDiv = document.getElementById('showroom');
-appDiv.innerHTML = `<h1>Component showroom</h1>`;
+const appDiv = document.getElementById('sidebar-grid__content');
+appDiv.innerHTML = `<h1>Components catalog</h1>`;

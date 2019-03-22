@@ -1,0 +1,42 @@
+/*
+ * Main palette
+ */
+$gray: #EEEEEE;
+$gray-hue1: #FAFAFA;
+$gray-hue2: #D1D1D1;
+$gray-hue3: #BDBDBD;
+
+$black: #222222;
+
+/*
+ * Theme basic styles
+ */
+:root, html, body {
+  background-color: white;
+  color: $black;
+  fill: $black;
+}
+:root, html, body, #app {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+/*
+ * Theme link styles
+ */
+a {
+  text-decoration: none;
+}
+.link {
+  cursor: pointer;
+}
+.link:focus {
+  outline: none;
+}
+
+h1, h2 {
+  font-family: Lato;
+}
+
+// @import './theme/page-layouts/sidebar-layout.scss';

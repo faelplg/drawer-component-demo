@@ -1,0 +1,81 @@
+/*
+ *  Sidebar layout template
+ *  <div id="sidebar-grid">
+ *    <div id="sidebar-grid__navbar"></div>
+ *    <div id="sidebar-grid__sidebar"></div>
+ *    <div id="sidebar-grid__content"></div>
+ *  </div>
+ */
+
+/*
+ * Sidebar ordering
+ * grid: 0
+ * navbar: 1
+ * sidebar: 0
+ * content: 0
+ */
+
+/** Parent grid */
+#sidebar-grid {
+  z-index: 0;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+@media (max-width: 899px) {
+  #sidebar-grid {
+    grid-template-rows: 64px min-content auto;
+  }
+}
+@media (min-width: 900px) {
+  #sidebar-grid {
+    grid-template-rows: 64px auto;
+  }
+}
+
+/** Navbar section */
+#sidebar-grid__navbar {
+  z-index: 1;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+/** Sidebar section */
+#sidebar-grid__sidebar {
+  z-index: 0;
+  background-color: $gray;
+  color: $black;
+  fill: $black;
+}
+@media (max-width: 899px) {
+  #sidebar-grid__sidebar {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row: 2;
+  }
+}
+@media (min-width: 900px) {
+  #sidebar-grid__sidebar {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+  }
+}
+
+/** Content section */
+#sidebar-grid__content {
+  z-index: 0;
+}
+@media (max-width: 899px) {
+  #sidebar-grid__content {
+   grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row: 3;
+  }
+}
+@media (min-width: 900px) {
+  #sidebar-grid__content {
+    grid-column-start: 4;
+    grid-column-end: -1;
+    grid-row: 2;
+  }
+}
