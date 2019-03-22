@@ -1,10 +1,10 @@
 /*
  * Page layouts
  */
-// @import './page-layouts/layout-structure.scss';
-// @import './page-layouts/sidebar-layout.scss';
+@import './layouts/structure.scss';
+@import './layouts/sidebar/sidebar.layout.scss';
 
 /*
  * Typography
  */
-// @import './typography/font-styles.scss';
+@import './typography/fonts.scss';

@@ -1,4 +1,4 @@
-// Import stylesheets
+// Import theme stylesheets
 import './main.scss';
 
 // Write Javascript code!

@@ -9,20 +9,6 @@ $gray-hue3: #BDBDBD;
 $black: #222222;
 
 /*
- * Theme basic styles
- */
-:root, html, body {
-  background-color: white;
-  color: $black;
-  fill: $black;
-}
-:root, html, body, #app {
-  height: 100%;
-  margin: 0;
-  overflow: hidden;
-}
-
-/*
  * Theme link styles
  */
 a {
@@ -35,4 +21,4 @@ a {
   outline: none;
 }
 
-// @import './theme/theme.scss';
+@import './theme/theme.scss';
