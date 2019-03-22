@@ -1,13 +1,48 @@
 /*
- * Theme basic styles
+ * Media query variables
+ */
+$phone_only: 599px;
+$tablet_portrait_min: 600px;
+$tablet_portrait_max: 899px;
+$tablet_landscape_min: 900px;
+$tablet_landscape_max: 1199px;
+$desktop_min: 1200px;
+$desktop_max: 1799px;
+$big_desktop_min: 1800px;
+
+/*
+ * Basic structure
+ */
+:root, html, body, #app {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+div, section {
+  box-sizing: border-box;
+}
+.container {
+  padding: 16px;
+}
+@media only screen and (max-width: $phone_only) {
+  .container {
+    padding: 8px;
+  }
+}
+.container--dense {
+  padding: 8px;
+}
+@media only screen and (max-width: $phone_only) {
+  .container--dense {
+    padding: 4px;
+  }
+}
+
+/*
+ * Default structure colors
  */
 :root, html, body {
   background-color: white;
   color: $black;
   fill: $black;
-}
-:root, html, body, #app {
-  height: 100%;
-  margin: 0;
-  overflow: hidden;
 }

@@ -1,4 +1,14 @@
 /*
+ * Main palette
+ */
+$gray: #EEEEEE;
+$gray-hue1: #FAFAFA;
+$gray-hue2: #D1D1D1;
+$gray-hue3: #BDBDBD;
+
+$black: #222222;
+
+/*
  * Page layouts
  */
 @import './layouts/structure.scss';
