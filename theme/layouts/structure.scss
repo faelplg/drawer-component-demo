@@ -11,17 +11,22 @@ $desktop_max: 1799px;
 $big_desktop_min: 1800px;
 
 /*
- * Basic structure
+ * Basic structures
  */
+
+/** Global structures */
 :root, html, body, #app {
   height: 100%;
   margin: 0;
   overflow: hidden;
 }
+/** Native containers */
 div, section {
   box-sizing: border-box;
 }
+/** (Flex) Container styles */
 .container {
+  display: flex;
   padding: 16px;
 }
 @media only screen and (max-width: $phone_only) {
@@ -36,4 +41,19 @@ div, section {
   .container--dense {
     padding: 4px;
   }
+}
+.container--horizontal {
+  flex-flow: row;
+}
+.container,
+.container--vertical {
+  flex-flow: column;
+}
+/** (Flex) Items */
+.box,
+.box--grow {
+  flex: auto;
+}
+.box--shrink {
+  flex: initial;
 }
