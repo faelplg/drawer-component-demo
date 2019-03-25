@@ -2,10 +2,19 @@
  * Typography structure
  */
 
+/** Headers */
 h1, h2, h3 {
+  font-weight: 300;
   margin: 8px 0 16px;
 }
+h1 {
+  letter-spacing: 1.5px;
+}
+h2 {
+  letter-spacing: 1.1px;
+}
 
+/** Text and paragraphs */
 p {
   margin: 4px 0 8px;
 }

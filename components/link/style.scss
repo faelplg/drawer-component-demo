@@ -10,3 +10,6 @@ a {
 .link:focus {
   outline: none;
 }
+
+/** Themes */
+@import './themes/dark.scss';

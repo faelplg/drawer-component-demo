@@ -1,0 +1,12 @@
+/*
+ * Link component - Dark theme
+ */
+a {
+  color: $light-blue;
+}
+a:focus, a:hover {
+  color: lighten($light-blue, 10%);
+}
+a:visited {
+  color: $blue;
+}
