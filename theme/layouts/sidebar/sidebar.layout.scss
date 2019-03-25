@@ -43,9 +43,6 @@
 /** Sidebar section */
 #sidebar-grid__sidebar {
   z-index: 0;
-  background-color: $gray;
-  color: $black;
-  fill: $black;
 }
 @media (max-width: 899px) {
   #sidebar-grid__sidebar {
@@ -79,3 +76,5 @@
     grid-row: 2;
   }
 }
+
+// @import './themes/gray.scss';

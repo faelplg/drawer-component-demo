@@ -37,11 +37,11 @@ div, section {
 .container--dense {
   padding: 8px;
 }
-@media only screen and (max-width: $phone_only) {
-  .container--dense {
-    padding: 4px;
-  }
-}
+// @media only screen and (max-width: $phone_only) {
+//   .container--dense {
+//     padding: 4px;
+//   }
+// }
 .container--horizontal {
   flex-flow: row;
 }

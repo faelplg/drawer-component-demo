@@ -1,3 +1,12 @@
-h1, h2, a {
-  font-family: Lato;
+/*
+ * Application fonts
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Philosopher|VT323');
+
+h1, h2, h3 {
+  font-family: 'VT323', monospace;
+}
+p, a, span {
+  font-family: 'Philosopher', sans-serif;
 }
