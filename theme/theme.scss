@@ -3,6 +3,8 @@
  */
 @import './palette/colors.scss';
 @import './palette/classes.scss';
+/** MDC specific*/
+@import './palette/material.scss';
 
 /*
  * Typography
@@ -16,4 +18,8 @@
 @import './layouts/structure.scss';
 @import './layouts/default/default.layout.scss';
 @import './layouts/sidebar/sidebar.layout.scss';
- 
+
+/*
+ * MDC theming
+ */
+@import '@material/theme/mdc-theme';
