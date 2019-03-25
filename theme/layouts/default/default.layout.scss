@@ -1,0 +1,62 @@
+/*
+ *  Default layout template
+<div id="default-grid">
+  <div id="default-grid__navbar"></div>
+  <div id="default-grid__content"></div>
+</div>
+ */
+
+/*
+ * Default layout z-ordering
+ * grid: 0
+ * navbar: 1
+ * content: 0
+ */
+
+/** Parent grid */
+#default-grid {
+  z-index: 0;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+@media (max-width: 899px) {
+  #default-grid {
+    grid-template-rows: 64px auto;
+  }
+}
+@media (min-width: 900px) {
+  #default-grid {
+    grid-template-rows: 64px auto;
+  }
+}
+
+/** Navbar section */
+#default-grid__navbar {
+  z-index: 1;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+/** Content section */
+#default-grid__content {
+  z-index: 0;
+}
+@media (max-width: 899px) {
+  #default-grid__content {
+   grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row: 2;
+  }
+}
+@media (min-width: 900px) {
+  #default-grid__content {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row: 2;
+  }
+}
+
+@import './themes/gray.scss';
+// @import './themes/blue.scss';
+// @import './themes/black.scss';

@@ -1,14 +1,14 @@
 /*
  *  Sidebar layout template
- *  <div id="sidebar-grid">
- *    <div id="sidebar-grid__navbar"></div>
- *    <div id="sidebar-grid__sidebar"></div>
- *    <div id="sidebar-grid__content"></div>
- *  </div>
+<div id="sidebar-grid">
+  <div id="sidebar-grid__navbar"></div>
+  <div id="sidebar-grid__sidebar"></div>
+  <div id="sidebar-grid__content"></div>
+</div>
  */
 
 /*
- * Sidebar ordering
+ * Sidebar layout z-ordering
  * grid: 0
  * navbar: 1
  * sidebar: 0
