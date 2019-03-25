@@ -38,17 +38,26 @@ div, section {
 .container--dense {
   padding: 8px;
 }
-// @media only screen and (max-width: $phone_only) {
-//   .container--dense {
-//     padding: 4px;
-//   }
-// }
 .container--horizontal {
   flex-flow: row;
 }
 .container,
 .container--vertical {
   flex-flow: column;
+}
+.container--raw {
+  padding: 0;
+  margin: 8px 0;
+}
+/** (Flex) Alignment */
+.align-items--center {
+  align-items: center;
+}
+.align-self--center {
+  align-self: center;
+}
+.justify--center {
+  justify-content: center;
 }
 /** (Flex) Items */
 .box,
@@ -57,4 +66,12 @@ div, section {
 }
 .box--shrink {
   flex: initial;
+}
+
+/*
+ * Theme specific styles
+ */
+#showroom__box {
+  width: 100%;
+  height: 100%;
 }
