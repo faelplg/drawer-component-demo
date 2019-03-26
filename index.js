@@ -2,7 +2,6 @@
 import './theme/theme.scss';
 
 /** Import components */
-import './components/components.scss';
 import Drawer from './components/drawer/drawer.component';
 import TopAppBar from './components/top-app-bar/top-app-bar.component';
 import TabBar from './components/tab-bar/tab-bar.component';
