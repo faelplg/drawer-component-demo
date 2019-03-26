@@ -1,1 +1,3 @@
-import './style.scss';
+/*
+ * Tab bar component class
+ */

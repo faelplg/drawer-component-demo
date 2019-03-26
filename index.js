@@ -1,21 +1,22 @@
-// Import application style
+/** Import application theme */
 import './theme/theme.scss';
 
-// Import components
-import './components/components';
+/** Import components */
+import './components/components.scss';
+import Drawer from './components/drawer/drawer.component';
+import TopAppBar from './components/top-app-bar/top-app-bar.component';
 
 import {MDCTopAppBar} from "@material/top-app-bar";
-import {MDCDrawer} from "@material/drawer";
 import {MDCTabBar} from '@material/tab-bar';
  
 const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
 
-const topAppBar = MDCTopAppBar.attachTo(document.getElementById('main__top-app-bar'));
-topAppBar.setScrollTarget(document.getElementById('main__container'));
+const topAppBar = new TopAppBar('main__top-app-bar');
+topAppBar.component.setScrollTarget(document.getElementById('main__container'));
 
-const drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+const drawer = new Drawer('.mdc-drawer');
 
-topAppBar.listen('MDCTopAppBar:nav', () => {
+topAppBar.component.listen('MDCTopAppBar:nav', () => {
   drawer.open = !drawer.open;
 });
 

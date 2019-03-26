@@ -1,1 +1,3 @@
-import './style.scss';
+/*
+ * Link component class
+ */
