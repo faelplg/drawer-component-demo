@@ -5,10 +5,9 @@ import './theme/theme.scss';
 import './components/components.scss';
 import Drawer from './components/drawer/drawer.component';
 import TopAppBar from './components/top-app-bar/top-app-bar.component';
+import TabBar from './components/tab-bar/tab-bar.component';
 
-import {MDCTabBar} from '@material/tab-bar';
- 
-const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
+const tabBar = new TabBar('.mdc-tab-bar');
 
 const topAppBar = new TopAppBar('main__top-app-bar');
 topAppBar.component.setScrollTarget(document.getElementById('main__container'));
