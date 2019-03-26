@@ -1,1 +1,1 @@
-import './drawer.style.scss';
+import './style.scss';
