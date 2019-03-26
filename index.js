@@ -6,7 +6,6 @@ import './components/components.scss';
 import Drawer from './components/drawer/drawer.component';
 import TopAppBar from './components/top-app-bar/top-app-bar.component';
 
-import {MDCTopAppBar} from "@material/top-app-bar";
 import {MDCTabBar} from '@material/tab-bar';
  
 const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
