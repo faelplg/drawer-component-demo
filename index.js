@@ -6,6 +6,9 @@ import './components/components';
 
 import {MDCTopAppBar} from "@material/top-app-bar";
 import {MDCDrawer} from "@material/drawer";
+import {MDCTabBar} from '@material/tab-bar';
+ 
+const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
 
 const topAppBar = MDCTopAppBar.attachTo(document.getElementById('main__top-app-bar'));
 topAppBar.setScrollTarget(document.getElementById('main__container'));
