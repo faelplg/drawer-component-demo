@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@material/icon-button": "^1.0.1",
+    "@material/tab-bar": "^1.0.1",
     "@material/theme": "^1.0.0",
     "@material/top-app-bar": "^1.0.1"
   }
