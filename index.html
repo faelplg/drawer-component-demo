@@ -1,3 +1,4 @@
+<!-- Drawer element -->
 <aside class="mdc-drawer mdc-drawer--dismissible">
   <div class="mdc-drawer__content">
     <nav class="mdc-list">
@@ -17,7 +18,9 @@
   </div>
 </aside>
 
+<!-- Drawer adjusted container element -->
 <div class="mdc-drawer-app-content">
+  <!-- Top app bar element -->
   <header id="main__top-app-bar" class="mdc-top-app-bar mdc-theme--on-primary" style="position:absolute;">
     <div class="mdc-top-app-bar__row">
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
@@ -31,24 +34,48 @@
       </section>
     </div>
   </header>
+  <!-- Main container element -->
   <div id="main__container" class="mdc-top-app-bar--fixed-adjust" style="overflow:auto;height:100%;">
     <div class="container">
       <div class="box box--shrink">
-        <h1 class="text--center">Front-end catalog</h1>
+        <h1 class="text--center">Name</h1>
+        <h2 class="text--center">Component view</h2>
       </div>
       <div class="box">
         <div class="container container--raw container--horizontal align-items--center">
+          <!-- Showroom container element -->
           <div id="showroom__box" class="box">
-            <div class="mdc-tab-bar" role="tablist">
+            <!-- Showroom control tab bar element -->
+            <nav class="mdc-tab-bar" role="tablist">
               <div class="mdc-tab-scroller">
                 <div class="mdc-tab-scroller__scroll-area">
                   <div class="mdc-tab-scroller__scroll-content">
                     <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
                       <span class="mdc-tab__content">
-                        <span class="mdc-tab__icon material-icons" aria-hidden="true">favorite</span>
-                        <span class="mdc-tab__text-label">Favorites</span>
+                        <span class="mdc-tab__icon material-icons" aria-hidden="true">web</span>
+                        <span class="mdc-tab__text-label">Web</span>
                       </span>
                       <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                      </span>
+                      <span class="mdc-tab__ripple"></span>
+                    </button>
+                    <button class="mdc-tab" role="tab">
+                      <span class="mdc-tab__content">
+                        <span class="mdc-tab__icon material-icons" aria-hidden="true">code</span>
+                        <span class="mdc-tab__text-label">HTML</span>
+                      </span>
+                      <span class="mdc-tab-indicator">
+                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                      </span>
+                      <span class="mdc-tab__ripple"></span>
+                    </button>
+                    <button class="mdc-tab" role="tab">
+                      <span class="mdc-tab__content">
+                        <span class="mdc-tab__icon material-icons" aria-hidden="true">code</span>
+                        <span class="mdc-tab__text-label">JS</span>
+                      </span>
+                      <span class="mdc-tab-indicator">
                         <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
                       </span>
                       <span class="mdc-tab__ripple"></span>
@@ -56,7 +83,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </nav>
           </div>
         </div>
       </div>
