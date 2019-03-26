@@ -19,6 +19,9 @@ $big_desktop_min: 1800px;
   margin: 0;
   overflow: hidden;
 }
+body {
+  display: flex;
+}
 /** Native containers */
 div, section {
   box-sizing: border-box;
@@ -46,7 +49,6 @@ div, section {
 }
 .container--raw {
   padding: 0;
-  margin: 8px 0;
 }
 /** (Flex) Alignment */
 .align-items--center {

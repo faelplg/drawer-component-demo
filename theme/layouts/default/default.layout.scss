@@ -22,25 +22,19 @@
 }
 @media (max-width: 899px) {
   #default-grid {
-    grid-template-rows: 64px auto;
+    grid-template-rows: auto;
   }
 }
 @media (min-width: 900px) {
   #default-grid {
-    grid-template-rows: 64px auto;
+    grid-template-rows: auto;
   }
-}
-
-/** Navbar section */
-#default-grid__navbar {
-  z-index: 1;
-  grid-column-start: 1;
-  grid-column-end: -1;
 }
 
 /** Content section */
 #default-grid__content {
   z-index: 0;
+  height: 100%;
 }
 @media (max-width: 899px) {
   #default-grid__content {
