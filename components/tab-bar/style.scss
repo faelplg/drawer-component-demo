@@ -18,3 +18,26 @@
 .mdc-tab-bar--rounded .mdc-tab:first-child > .mdc-tab__ripple {
   border-top-left-radius: 16px;
 }
+
+/** Tab panels */
+.panels {
+  height: calc(100% - 49px);
+}
+.panels > .panel {
+  background-color: $light-gray;
+}
+.panels > .panel.panel--rounded {
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+.panels > .panel.active {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.8s, opacity 0.5s linear;
+}
+.panels > .panel:not(.active) {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  margin-left: -999px;
+}
