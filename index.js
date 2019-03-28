@@ -17,7 +17,7 @@ tabBar.component.listen('MDCTabBar:activated', sig => {
 const topAppBar = new TopAppBar('main__top-app-bar');
 topAppBar.component.setScrollTarget(document.getElementById('main__container'));
 
-const drawer = new Drawer('.mdc-drawer');
+const drawer = new Drawer('#main__drawer');
 
 topAppBar.component.listen('MDCTopAppBar:nav', () => {
   drawer.open = !drawer.open;
