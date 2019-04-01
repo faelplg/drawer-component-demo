@@ -1,1 +1,5 @@
 @import "@material/list/mdc-list";
+
+.mdc-list-item.mdc-list-item--activated {
+  background-color: $black;
+}
