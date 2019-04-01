@@ -18,12 +18,14 @@ const topAppBar = new TopAppBar('main__top-app-bar');
 topAppBar.component.setScrollTarget(document.getElementById('main__container'));
 
 const drawer = new Drawer('#main__drawer');
+// const exampleDrawer = new Drawer('#example__drawer');
 
 topAppBar.component.listen('MDCTopAppBar:nav', () => {
   drawer.open = !drawer.open;
 });
 
 const list = new List('.mdc-list');
+const exampleList = new List('#example__list');
 
 const panels = document.querySelector('.panels');
 

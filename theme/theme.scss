@@ -28,3 +28,28 @@
  * Components styles
  */
 @import '../components/components.scss';
+
+/*
+ * Temp styles
+ */
+#example__drawer {
+  z-index: 0;
+}
+#example__drawer .mdc-drawer__header {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  background-color: $light-gray;
+  height: 80px;
+}
+#example__drawer .mdc-drawer__header-logo {
+  margin-right: 18px;
+}
+#example__drawer .mdc-drawer__title::before {
+    height: 0px;
+}
+#example__drawer #example__list .mdc-list-item.mdc-list-item--activated {
+  background-color: $blue;
+  // color: $black;
+  // fill: $black;
+}

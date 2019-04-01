@@ -70,6 +70,19 @@ div, section {
 }
 
 /*
+ * Link
+ */
+a {
+  text-decoration: none;
+}
+.link {
+  cursor: pointer;
+}
+.link:focus {
+  outline: none;
+}
+
+/*
  * Theme specific styles
  */
 #showroom__box {
