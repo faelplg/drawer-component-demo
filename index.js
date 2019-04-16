@@ -1,35 +1,44 @@
-/** Import application theme */
+/** Import application theme. */
 import './theme/theme.scss';
 
-/** Import components */
+/** Import components. */
 import Drawer from './components/drawer/drawer.component';
 import List from './components/list/list.component';
 import TopAppBar from './components/top-app-bar/top-app-bar.component';
 import TabBar from './components/tab-bar/tab-bar.component';
 
-const tabBar = new TabBar('.mdc-tab-bar');
-tabBar.component.focusOnActivate = false;
-tabBar.component.listen('MDCTabBar:activated', sig => {
-  console.log('Tab Bar event', sig);
-  updatePanel(sig.detail.index);
+/** Instance Tab Bar. */
+const example_tab_bar = new TabBar('.mdc-tab-bar');
+example_tab_bar.component.focusOnActivate = false;
+/** Listen when a tab panel has to change. */
+example_tab_bar.component.listen('MDCTabBar:activated', e => {
+  console.log(`Tab Bar event on ${example_tab_bar}: ${e.type}`);
+  this.updatePanel(e.detail.index);
 });
 
-const topAppBar = new TopAppBar('main__top-app-bar');
-topAppBar.component.setScrollTarget(document.getElementById('main__container'));
+/** Instance Top App Bar. */
+const example_top_app_bar = new TopAppBar('#example-top-app-bar__component');
+example_top_app_bar.component.setScrollTarget(document.getElementById('example-page__content'));
 
-const drawer = new Drawer('#main__drawer');
-// const exampleDrawer = new Drawer('#example__drawer');
+/** Instance Drawer. */
+const drawer = new Drawer('#example-drawer__component');
 
-topAppBar.component.listen('MDCTopAppBar:nav', () => {
+/** Toggle Drawer from Top App Bar navigation button. */
+example_top_app_bar.component.listen('MDCTopAppBar:nav', () => {
   drawer.open = !drawer.open;
 });
 
-const list = new List('.mdc-list');
-const exampleList = new List('#example__list');
+/** Instance list. */
+const list = new List('#example-list__component');
 
+/** Store element with tab panels. */
 const panels = document.querySelector('.panels');
 
-function updatePanel(index) {
+/**
+ * Update visible panel after changing tab.
+ * @param {number} index - Index of clicked tab.
+ */
+this.updatePanel = index => {
   const activePanel = panels.querySelector('.panel.active');
   if (activePanel) {
     activePanel.classList.remove('active');
@@ -38,7 +47,4 @@ function updatePanel(index) {
   if (newActivePanel) {
     newActivePanel.classList.add('active');
   }
-}
-
-const test = document.getElementById('showroom__box');
-console.log('Testing', test);
+};

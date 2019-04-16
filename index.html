@@ -1,11 +1,14 @@
-<!-- Drawer element -->
-<aside id="main__drawer" class="mdc-drawer mdc-drawer--modal">
+<!-- @use {component} Drawer. - Drawer for app navigation. -->
+<aside id="example-drawer__component" class="mdc-drawer mdc-drawer--modal">
+  <!-- @section Header - Title and subtitle. -->
 	<div class="mdc-drawer__header">
     <h3 class="mdc-drawer__title">Title</h3>
     <h6 class="mdc-drawer__subtitle">Subtitle</h6>
 	</div>
+  <!-- @section Content - Drawer component content. -->
 	<div class="mdc-drawer__content">
-		<nav class="mdc-list">
+    <!-- @use {component} List - List component for navigation. -->
+		<nav id="example-list__component" class="mdc-list">
 			<a class="mdc-list-item mdc-list-item--activated" href="#" aria-selected="true">
 				<i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
         <span class="mdc-list-item__text">Inbox</span>
@@ -21,31 +24,30 @@
     </nav>
   </div>
 </aside>
-<!-- Modal drawer required -->
+<!-- Used for &Drawer when .mdc-drawer--modal class is used. -->
 <div class="mdc-drawer-scrim"></div>
 
-<!-- Drawer adjusted container element -->
+<!-- @section Page container - Container with &Drawer adjustments applied. -->
 <div class="mdc-drawer-app-content">
-  <!-- Top app bar element -->
-  <header id="main__top-app-bar" class="mdc-top-app-bar mdc-theme--on-primary mdc-theme--secondary" style="position:absolute;">
+  <!-- @section Top App Bar - Main app bar for quick accessing tools. -->
+  <!-- @use {component} Top App Bar - Top App Bar component for calling Drawer. -->
+  <header id="example-top-app-bar__component" class="mdc-top-app-bar mdc-theme--on-primary mdc-theme--secondary" style="position:absolute;">
     <div class="mdc-top-app-bar__row">
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
         <button class="mdc-icon-button mdc-top-app-bar__navigation-icon material-icons">menu</button>
-        <span class="mdc-top-app-bar__title">Drawer showroom</span>
+        <span class="mdc-top-app-bar__title">Drawer component</span>
       </section>
-      <!-- <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
-        <button class="mdc-icon-button mdc-top-app-bar__action-item material-icons" aria-label="Download">file_download</button>
-        <button class="mdc-icon-button mdc-top-app-bar__action-item material-icons" aria-label="Print this page">print</button>
-        <button class="mdc-icon-button mdc-top-app-bar__action-item material-icons" aria-label="Bookmark this page">bookmark</button>
-      </section> -->
     </div>
   </header>
-  <!-- Main container element -->
-  <div id="main__container" class="mdc-top-app-bar--fixed-adjust" style="overflow:auto;height:100%;">
+  <!-- @section Content container - Page content container with &TopAppBar adjustments applied. -->
+  <div id="example-page__content"
+       class="mdc-top-app-bar--fixed-adjust"
+       style="overflow:auto;height:100%;">
     <div class="container">
       <div class="box box--shrink">
-        <h1 class="text--center">Name</h1>
-        <h2 class="text--center">Component view</h2>
+        <h1>Install</h1>
+        <h1>Use</h1>
+        <h1>Customize</h1>
       </div>
       <div class="box">
         <div class="container container--raw container--horizontal align-items--center">
@@ -58,8 +60,8 @@
                   <div class="mdc-tab-scroller__scroll-content">
                     <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
                       <span class="mdc-tab__content">
-                        <span class="mdc-tab__icon material-icons" aria-hidden="true">web</span>
-                        <span class="mdc-tab__text-label">Web</span>
+                        <span class="mdc-tab__icon material-icons" aria-hidden="true">code</span>
+                        <span class="mdc-tab__text-label">HTML</span>
                       </span>
                       <span class="mdc-tab-indicator mdc-tab-indicator--active">
                         <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
@@ -69,7 +71,7 @@
                     <button class="mdc-tab" role="tab">
                       <span class="mdc-tab__content">
                         <span class="mdc-tab__icon material-icons" aria-hidden="true">code</span>
-                        <span class="mdc-tab__text-label">HTML</span>
+                        <span class="mdc-tab__text-label">CSS</span>
                       </span>
                       <span class="mdc-tab-indicator">
                         <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
@@ -91,43 +93,14 @@
               </div>
             </nav>
             <div class="panels">
-              <div class="container container--raw panel active" id="panel-1" role="tabpanel" aria-hidden="false">
-                <!-- Drawer element -->
-                <aside id="example__drawer" class="mdc-drawer">
-                  <div class="mdc-drawer__header">
-                    <div class="mdc-drawer__header-logo">
-                      <i class="material-icons">store_mall_directory</i>
-                    </div>
-                    <div class="mdc-drawer__header-title">
-                      <h3 class="mdc-drawer__title">Drawer</h3>
-                      <h6 class="mdc-drawer__subtitle">Default component</h6>
-                    </div>
-                  </div>
-                  <div class="mdc-drawer__content">
-                    <nav id="example__list" class="mdc-list">
-                      <a class="mdc-list-item mdc-list-item--activated" href="#" aria-selected="true">
-                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
-                        <span class="mdc-list-item__text">Inbox</span>
-                      </a>
-                      <a class="mdc-list-item" href="#">
-                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
-                        <span class="mdc-list-item__text">Outgoing</span>
-                      </a>
-                      <a class="mdc-list-item" href="#">
-                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
-                        <span class="mdc-list-item__text">Drafts</span>
-                      </a>
-                    </nav>
-                  </div>
-                </aside>
-                <!-- Modal drawer required -->
-                <!-- <div class="mdc-drawer-scrim"></div> -->
+              <div id="panel-1" class="container panel active" role="tabpanel" aria-hidden="false">
+                <h1>Panel 1 - HTML</h1>
               </div>
-              <div class="container panel" id="panel-2" role="tabpanel" aria-hidden="true">
-                <h1>Panel 2</h1>
+              <div id="panel-2" class="container panel" role="tabpanel" aria-hidden="true">
+                <h1>Panel 2 - CSS</h1>
               </div>
-              <div class="container panel" id="panel-3" role="tabpanel" aria-hidden="true">
-                <h1>Panel 3</h1>
+              <div id="panel-3" class="container panel" role="tabpanel" aria-hidden="true">
+                <h1>Panel 3 - JavaScript</h1>
               </div>
             </div>
           </div>

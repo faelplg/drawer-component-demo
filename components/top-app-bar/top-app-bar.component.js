@@ -12,7 +12,7 @@ export default class TopAppBar {
    *
    */
   constructor(_key) {
-    this.component = MDCTopAppBar.attachTo(document.getElementById(_key));
+    this.component = MDCTopAppBar.attachTo(document.querySelector(_key));
   }
 
   log() {
